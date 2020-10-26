@@ -22,25 +22,7 @@ function mousePressed() {
   }
   count++;
 
-  if (count === 3) {
-    for (var i = 0; i < tree.length; i++) {
-      if (!tree[i].finished) {
-        var leaf = tree[i].end.copy();
-        leaves.push(leaf);
-      }
-    }
-  }
-
-  if (count === 6) {
-    for (var i = 0; i < tree.length; i++) {
-      if (!tree[i].finished) {
-        var leaf = tree[i].end.copy();
-        leaves.push(leaf);
-      }
-    }
-  }
-
-  if (count === 9) {
+  if (count % 3 === 0) {
     for (var i = 0; i < tree.length; i++) {
       if (!tree[i].finished) {
         var leaf = tree[i].end.copy();
@@ -63,8 +45,8 @@ function draw() {
     fill(255, 204, 100);
     noStroke();
     ellipse(leaves[i].x, leaves[i].y, 2.7, 5);
-    leaves[i].x += random (0, 1);
-    leaves[i].y += random (0, 1);
+    leaves[i].x += random (0, 1.7);
+    leaves[i].y += random (0, 1.5);
   }
 
 }
