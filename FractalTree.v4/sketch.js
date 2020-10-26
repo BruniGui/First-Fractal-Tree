@@ -4,9 +4,9 @@ var leaves = [];
 var count = 0;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   var a = createVector (width / 2, height);
-  var b = createVector (width / 2, height - 100);
+  var b = createVector (width / 2, height - 80);
   var root = new Branch(a, b);
 
   tree[0] = root;
@@ -60,7 +60,7 @@ function draw() {
   }
 
   for (var i = 0; i < leaves.length; i++) {
-    fill(255, 0, 100, 100);
+    fill(255, 204, 100);
     noStroke();
     ellipse(leaves[i].x, leaves[i].y, 2.7, 5);
     leaves[i].x += random (0, 1);
