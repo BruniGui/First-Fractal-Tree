@@ -6,7 +6,7 @@ var count = 0;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   var a = createVector (width / 2, height);
-  var b = createVector (width / 2, height * 3/4);
+  var b = createVector (width / 2, height * 2/4);
   var root = new Branch(a, b);
 
   tree[0] = root;
